@@ -1,5 +1,6 @@
 # Guia de Estudo: Microsoft AZ-900 – Fundamentos do Azure
 
+
 ## Introdução
 A certificação AZ-900 é a porta de entrada para compreender os fundamentos do Azure, a plataforma de nuvem da Microsoft. Este guia aborda desde a evolução dos data centers e a necessidade de virtualização até os modelos de nuvem e os conceitos de despesas de capital (CapEx) e operacionais (OpEx). Com uma abordagem clara e exemplos práticos, este material servirá tanto para revisão quanto para aprofundamento dos temas essenciais para a certificação.
 
@@ -104,7 +105,7 @@ Uma das grandes vantagens do Azure e de outros provedores de nuvem é o modelo b
 
 ---
 
- Benefícios e Recursos Fundamentais da Nuvem no Contexto do AZ-900
+# Benefícios e Recursos Fundamentais da Nuvem no Contexto do AZ-900
 
 ## 1. Introdução
 A computação em nuvem continua sendo um dos principais pilares de transformação digital nas organizações, oferecendo ferramentas para criar, gerenciar e otimizar aplicações de forma ágil e segura. Dentro do Microsoft Azure, diversos conceitos e serviços permitem alcançar alta disponibilidade, escalabilidade, elasticidade, segurança e muito mais.
