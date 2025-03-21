@@ -238,3 +238,120 @@ Ao armazenar dados no Azure, você pode escolher diferentes estratégias de redu
 ### GZRS (Geo Zone-Redundant Storage)
 - Combina ZRS e GRS, armazenando dados de forma redundante em zonas diferentes na região primária e em outra região secundária.
 - É o nível máximo de resiliência, ideal para workloads críticos que precisam de alta disponibilidade e proteção contra falhas regionais.
+
+# Artigo: Tipos de Serviço em Nuvem (IaaS, PaaS e SaaS) e o Modelo de Responsabilidade Compartilhada
+
+## 1. Introdução
+Os serviços de nuvem revolucionaram a maneira como as organizações adquirem e gerenciam recursos de TI. Em vez de comprar e manter toda a infraestrutura localmente (on-premises), muitas empresas optam pelo uso de serviços em nuvem, pagando apenas pelos recursos que realmente utilizam.
+
+Dentro desse contexto, surgem três modelos principais de serviço em nuvem: **Infrastructure as a Service (IaaS)**, **Platform as a Service (PaaS)** e **Software as a Service (SaaS)**. Eles não são exclusivos da Microsoft; provedores como AWS, Google Cloud e Oracle também oferecem serviços que se enquadram nesses modelos. Cada um traz diferentes níveis de gerenciamento e responsabilidade, tanto para o provedor quanto para o cliente.
+
+Neste artigo, abordaremos:
+- O **Modelo de Responsabilidade Compartilhada**.
+- As definições de **IaaS**, **PaaS** e **SaaS**, com seus casos de uso mais apropriados.
+- Alguns exemplos práticos para esclarecer cada modelo.
+- Orientações de estudo e dicas para quem está iniciando no Azure ou se preparando para o exame **AZ-900**.
+
+---
+
+## 2. Modelo de Responsabilidade Compartilhada
+Independentemente do modelo (IaaS, PaaS ou SaaS), existem responsabilidades que são divididas entre o fornecedor da nuvem (por exemplo, Microsoft) e o cliente (usuário/empresa).
+
+### Fornecedor de Nuvem (Microsoft)
+- Gerencia a infraestrutura física (datacenters, máquinas, rede, energia etc.).
+- Fornece segurança em nível físico e mantém a camada básica de virtualização e serviços subjacentes.
+
+### Cliente (Usuário/Empresa)
+- Configura e gerencia o que está dentro do escopo de seu controle: sistemas operacionais, aplicativos e dados (no caso de IaaS), configurações de plataforma (no caso de PaaS) ou apenas a forma como o software é usado (no caso de SaaS).
+  
+Assim, a responsabilidade do usuário **aumenta** conforme se aproxima do modelo IaaS e **diminui** conforme vai em direção ao modelo SaaS.
+
+---
+
+## 3. Modelos de Serviço em Nuvem
+
+### 3.1. Infrastructure as a Service (IaaS)
+No modelo **IaaS**, o provedor de nuvem oferece toda a infraestrutura virtual: servidores, máquinas virtuais, redes e armazenamento. O cliente, por sua vez:
+
+- Tem mais controle sobre o sistema operacional, configurações de rede, aplicações instaladas etc.
+- É responsável por instalar e manter sistemas operacionais, aplicar patches de segurança e gerenciar a configuração do servidor.
+- Paga de acordo com o uso (**pay-as-you-go**).
+
+**Exemplo:**
+- **Azure Virtual Machines**: você escolhe o sistema operacional, tamanho da VM, configurações de rede e é o responsável pelo gerenciamento do SO e das aplicações.
+
+**Caso de uso**:
+- Migração de uma aplicação legada para a nuvem, onde você precisa de acesso profundo ao servidor, customizações específicas ou compatibilidade com sistemas operacionais diferenciados.
+
+**Vantagens do IaaS**:
+- Flexibilidade total para instalar e gerenciar qualquer tipo de aplicação.
+- Maior controle de segurança, se a empresa precisar de configurações específicas.
+- Ótimo para quem ainda não está pronto para reescrever todo o aplicativo e precisa apenas levar seu ambiente on-premises para a nuvem.
+
+---
+
+### 3.2. Platform as a Service (PaaS)
+No modelo **PaaS**, o provedor de nuvem oferece uma plataforma gerenciada para que você possa desenvolver, testar, implantar e gerenciar aplicações sem se preocupar com detalhes de infraestrutura, servidores ou sistemas operacionais.
+
+- O cliente se foca apenas em desenvolver e manter o código do aplicativo.
+- A configuração e manutenção de servidores, sistemas operacionais e estruturas básicas de software ficam a cargo do provedor.
+- Geralmente, inclui ferramentas de análise, banco de dados e suporte para linguagens de programação modernas.
+
+**Exemplo:**
+- **Azure App Service**: permite implantar aplicativos web ou APIs sem gerenciar servidores diretamente.
+- **Azure SQL Database**: oferece banco de dados SQL totalmente gerenciado, dispensando a preocupação com patches, upgrades de SO ou instalação de SQL Server.
+
+**Caso de uso**:
+- Criação de aplicações novas (ou modernização de antigas) que podem se beneficiar de um ambiente gerenciado, escalável e de alta disponibilidade, sem exigir a gerência minuciosa de infraestrutura.
+
+**Vantagens do PaaS**:
+- **Desenvolvimento acelerado**: Foco no código e não na infraestrutura.
+- **Custos otimizados**: Tempo de entrega reduzido, pois não é preciso gerenciar máquinas virtuais, patches e atualizações de SO.
+- **Escalabilidade simplificada**: As plataformas muitas vezes oferecem escalonamento automático de recursos.
+
+---
+
+### 3.3. Software as a Service (SaaS)
+No modelo **SaaS**, o provedor entrega o software completo, pronto para uso, pela Internet. É o modelo em que o usuário final tem menos responsabilidade quanto à infraestrutura e aplicação.
+
+- O cliente utiliza o software pagando por assinatura ou conforme o uso.
+- Não há preocupação alguma com servidores, configurações ou instalação local.
+- As atualizações e manutenções são totalmente gerenciadas pelo fornecedor.
+
+**Exemplo:**
+- **Microsoft 365 (Office 365)**: inclui e-mail (Exchange Online), armazenamento (OneDrive), colaboração (Teams) e outras ferramentas, tudo gerenciado pela Microsoft.
+
+**Caso de uso**:
+- Empresas que querem focar totalmente em sua atividade principal, sem se preocupar em instalar ou manter aplicativos de produtividade internamente.
+
+**Vantagens do SaaS**:
+- **Implantação imediata**: Basta assinar o serviço e começar a usar.
+- **Custos previsíveis**: Modelo de assinatura mensal/anual conforme o número de usuários.
+- **Atualizações e patches**: Realizados automaticamente pelo provedor.
+
+---
+
+## 4. Comparando IaaS, PaaS e SaaS
+
+| Característica  | IaaS                                           | PaaS                                                | SaaS                                        |
+|-----------------|-----------------------------------------------|-----------------------------------------------------|---------------------------------------------|
+| **Controle**        | Alto (usuário gerencia SO, rede, etc.)        | Médio (usuário gerencia apps e dados)               | Baixo (usuário só usa o software)           |
+| **Responsabilidade** | Compartilhada, com maior carga no cliente    | Compartilhada, mas maior parte no provedor          | Maior parte no provedor                     |
+| **Casos de Uso**     | Migração de VMs, sistemas legados, customização total | Desenvolvimento de apps sem gerenciar infra         | Soluções de produtividade (e-mail, ERP, CRM)|
+| **Exemplo no Azure** | Azure Virtual Machines                        | Azure App Service, Azure SQL Database               | Microsoft 365, Dynamics 365                 |
+
+---
+
+## 5. Laboratório e Observações Práticas (Módulo 1)
+Nos laboratórios do Módulo 1 (referentes ao treinamento **AZ-900**), é possível explorar:
+
+### Máquinas Virtuais no Portal Azure (IaaS)
+- Ao criar uma VM, você define imagem do SO, tamanho da máquina, opções de disponibilidade (Availability Sets ou Zones), rede virtual e outras configurações.  
+- No final, o portal mostra uma previsão de custo com base nas suas escolhas.
+
+### Banco de Dados SQL (PaaS)
+- Ao provisionar um **Azure SQL Database**, você não precisa se preocupar com a instalação do SQL Server ou do sistema operacional.
+- É necessário apenas configurar parâmetros como tamanho do banco, nível de desempenho e segurança.
+- O portal estima o custo mensal com base no tipo de SQL escolhido (Basic, Standard, Premium etc.).
+
+Essas experiências no Portal do Azure ajudam a entender como cada modelo de serviço delega responsabilidades diferentes ao usuário e ao provedor.
