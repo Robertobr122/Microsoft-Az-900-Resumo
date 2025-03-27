@@ -355,3 +355,50 @@ Nos laboratórios do Módulo 1 (referentes ao treinamento **AZ-900**), é possí
 - O portal estima o custo mensal com base no tipo de SQL escolhido (Basic, Standard, Premium etc.).
 
 Essas experiências no Portal do Azure ajudam a entender como cada modelo de serviço delega responsabilidades diferentes ao usuário e ao provedor.
+
+## 6. Gerenciamento e Monitoramento de Recursos no Portal do Azure
+### 6.1 Exploração do Site DataCenter.microsoft.com
+No site datacenter.microsoft.com, é possível:
+
+Acompanhar as notícias sobre os data centers da Microsoft.
+
+Visualizar um mapa interativo que mostra a localização de todos os data centers do mundo, permitindo uma visão global da infraestrutura da Microsoft.
+
+### 6.2 Criação de um Grupo de Recursos no Portal do Azure
+O grupo de recursos é um contêiner lógico no Azure que agrupa recursos relacionados para facilitar o gerenciamento. Veja o passo a passo para criá-lo:
+
+Acesso e Pesquisa:
+No portal do Microsoft Azure, utilize a barra de pesquisa para localizar “grupo de recursos” e clique na opção correspondente.
+
+Configuração Inicial:
+
+Assinatura: Selecione a assinatura ativa.
+
+Grupo de Recursos: Defina um nome para o grupo, que servirá como identificador.
+
+Região: Escolha a região onde os recursos serão alocados, considerando fatores como latência e conformidade.
+
+Marcações (Tags): Utilize tags para adicionar informações descritivas (por exemplo, subtítulos que expliquem funcionalidades e obrigações). Essa prática facilita a identificação dos recursos na fatura e melhora a organização.
+
+Revisão e Criação:
+Após preencher as informações, clique em “Revisar + criar”. Revise os detalhes e, se tudo estiver correto, confirme clicando em “Criar”.
+
+O grupo de recursos será criado vazio e você poderá adicionar, posteriormente, as diversas soluções e serviços que compõem sua infraestrutura.
+
+### 6.3 Ferramentas de Monitoramento e Gerenciamento
+Log de Atividade:
+Exibe registros de criação, alteração ou exclusão de recursos, funcionando como um sistema de auditoria que ajuda a monitorar as operações realizadas.
+
+IAM (Identity and Access Management):
+Permite gerenciar o acesso aos recursos, atribuindo ou revogando permissões para usuários e grupos. Essa ferramenta é fundamental para garantir que apenas pessoas autorizadas possam modificar ou acessar determinados recursos.
+
+Eventos:
+Oferece uma visualização das automações e alertas configurados, ajudando a identificar atividades importantes ou problemas potenciais.
+
+Implantações:
+Lista os recursos e serviços que foram implantados, permitindo acompanhar o histórico de configurações e alterações realizadas na infraestrutura.
+
+Exemplo Prático:
+Após criar um grupo de recursos para um novo projeto, você pode usar o Log de Atividade para monitorar a criação de VMs e o IAM para garantir que apenas a equipe de TI tenha acesso administrativo, garantindo transparência e segurança.
+
+
